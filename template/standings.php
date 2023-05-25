@@ -1,7 +1,9 @@
 <table>
   <thead>
     <th></th>
-    <th colspan="2" align="left"></th>
+    <th colspan="2" align="left">
+      <?php // __('Team');  ?>
+    </th>
     <th>M</th>
     <?php if (!$atts['compact']): ?>
       <th>W</th>
@@ -16,8 +18,8 @@
       <td><?= $index + 1 ?>.</td>
       <td align="center" valign="middle">
         <img
-          style="width: auto; height: 1.5em; vertical-align: middle"
-          class="img-fluid"
+          style="max-width: none !important; height: 1.5em !important; vertical-align: middle; object-fit: contain"
+          class=""
           src="<?= $team->teamIconUrl ?>"
         />
       </td>
