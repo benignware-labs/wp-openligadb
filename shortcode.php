@@ -3,7 +3,7 @@
 add_shortcode('openligadb', function($atts = [], $content) {
   $atts = shortcode_atts([
 		'league' => 'bl1',
-    'season' => '2022',
+    'season' => '',
     'compact' => false
 	], $atts, 'openligadb');
 
@@ -19,7 +19,7 @@ add_shortcode('openligadb', function($atts = [], $content) {
   $url = sprintf('%s/%s/%s/%s', $api_base, $api_action, $league, $season);
   $data = oldb_get_url($url);
 
-  if ($data && !count($data) && !$atts['season']) {
+  if (is_array($data) && !count($data) && !$atts['season']) {
     $url = sprintf('%s/%s/%s/%s', $api_base, $api_action, $league, $season - 1);
     $data = oldb_get_url($url);
   }

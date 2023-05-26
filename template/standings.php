@@ -36,4 +36,9 @@
       <td><?= $team->points ?></td>
     </tr>
   <?php endforeach ?>
+  <caption>
+    <small>
+      <small>Powered by <a href="https://www.openligadb.de/">OpenLigaDB</a></small>
+    </small>
+  </caption>
 </table>
