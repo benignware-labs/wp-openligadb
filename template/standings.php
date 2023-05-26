@@ -7,8 +7,8 @@
     <th>M</th>
     <?php if (!$atts['compact']): ?>
       <th>W</th>
-      <th>L</th>
       <th>D</th>
+      <th>L</th>
       <th>GD</th>
     <?php endif ?>
     <th>P</th>
@@ -29,8 +29,8 @@
       <td><?= $team->matches ?></td>
       <?php if (!$atts['compact']): ?>
         <td><?= $team->won ?></td>
-        <td><?= $team->lost ?></td>
         <td><?= $team->draw ?></td>
+        <td><?= $team->lost ?></td>
         <td><?= $team->goalDiff ?></td>
       <?php endif ?>
       <td><?= $team->points ?></td>
